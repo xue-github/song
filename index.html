@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+           background-color: black;
+            z-index: -1;
+        }
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 200px auto;
+            position: relative;
+            transform-style:preserve-3d ;
+            perspective: 99999px;
+            transform: rotateX(20deg) rotateY(20deg);
+            transition: all 3s;
+            animation: dong 4s linear infinite;
+        }
+        .box div{
+            line-height: 100px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            position: absolute;
+            box-sizing: border-box;
+        }
+        .top{
+            background-color: rgba(5, 6, 32, 0.91);
+            transform: rotateX(80deg) translateZ(90px);
+        }
+        .bottom{
+            background-color: rgba(5, 2, 6, 0.81);
+            transform: rotateX(-70deg) translateZ(120px);
+        }
+        .qian{
+            background-color: rgba(40, 43, 42, 0.91);
+            transform: translateZ(100px);
+        }
+        .hou{
+            background-color: rgba(19, 18, 32, 0.91);
+            transform: rotateY(140deg) translateZ(120px);
+        }
+        .left{
+            background-color: rgba(5, 6, 32, 0.91);
+            transform: rotateY(90deg) translateZ(125px);
+        }
+        .right{
+            background-color: rgba(19, 18, 32, 0.91);;
+            transform: rotateY(-90deg) translateZ(130px);
+        }
+        @keyframes dong {
+            0%{
+                transform: rotateX(30deg) rotateY(20deg);
+            }
+            100%{
+                transform: rotateX(350deg) rotateY(380deg);
+            }
+        }
+        .box:hover div:nth-of-type(1){
+
+            transform: rotateX(40deg) translateZ(150px);
+        }
+        .box:hover div:nth-of-type(2){
+            transform: rotateX(-90deg) translateZ(130px);
+        }
+        .box:hover div:nth-of-type(3){
+            transform: translateZ(20px) translateZ(160px);;
+        }
+        .box:hover div:nth-of-type(4){
+            transform: rotateY(150deg) translateZ(170px);
+        }
+        .box:hover div:nth-of-type(5){
+            transform: rotateY(90deg) translateZ(140px);
+        }
+        .box:hover div:nth-of-type(6){
+            transform: rotateY(-90deg) translateZ(170px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <a href="music.html"> <h1 style="color: white">随便听music</h1></a>
+    <div class="top"><p></p></div>
+    <div class="bottom"><p></p></div>
+    <div class="qian"><p></p></div>
+    <div class="hou"><p></p></div>
+    <div class="left"><p></p></div>
+    <div class="right"><p></p></div>
+</div>
+</body>
+</html>
